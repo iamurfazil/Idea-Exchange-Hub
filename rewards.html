@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rewards - IDEA EXCHANGE HUB</title>
+    <link rel="stylesheet" href="rewards.css">
+</head>
+<body>
+    <header>
+        <h1>Idea Exchange Hub - Rewards</h1>
+        <nav>
+            <a href="index.html">Home</a> 
+            <a href="login.html">Login</a> 
+            <a href="register.html">Register</a> 
+            <a href="rewards.html">Rewards</a> 
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Your Rewards</h2>
+        <div style="border: 2px solid gold; padding: 20px; border-radius: 10px; background-color: #fff4cc;">
+            <p><strong>Total Reward Points:</strong> <span id="totalRewards">0</span></p>
+            <p><strong>Last Earned Points:</strong> <span id="lastEarned">0</span></p>
+            <p>Thank you for contributing to the community! Keep solving challenges and sharing ideas to earn more points.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>How to Earn Rewards</h2>
+        <ul>
+            <li><strong>10 Points:</strong> For providing a solution to a problem.</li>
+            <li><strong>5 Points:</strong> For sharing a new and impactful problem.</li>
+            <li><strong>Bonus Points:</strong> For exceptional contributions reviewed by admins.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Top Contributors</h2>
+        <div style="border: 2px dashed #333; padding: 15px; border-radius: 10px;">
+            <ol id="topContributors">
+                <li> Mohamamd Fazil - 150 Points</li>
+                <li>Muskan - 150 Points</li>
+                <li>Vaseem  - 100 Points</li>
+                <li>Shafiya  -100 Points</li>
+                <li>Raju- 90 Points</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Idea Exchange Hub. All rights reserved.</p>
+        <nav>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a> |
+            <a href="#">About Us</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Simulated reward points for the logged-in user
+        let totalPoints = 50; // Replace with actual user data
+        let lastEarnedPoints = 10; // Replace with actual recent data
+
+        document.getElementById('totalRewards').innerText = totalPoints;
+        document.getElementById('lastEarned').innerText = lastEarnedPoints;
+    </script>
+</body>
+</html>

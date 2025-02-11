@@ -1,0 +1,112 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #1e3d58;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section Styling */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1e3d58;
+}
+
+/* Reward Box Styling */
+div[style*="border: 2px solid gold"] {
+    background-color: #fff4cc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+div[style*="border: 2px solid gold"] p {
+    font-size: 1.2rem;
+}
+
+/* How to Earn List Styling */
+section ul {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+section ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Top Contributors List Styling */
+div[style*="border: 2px dashed"] {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1e3d58;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IDEA EXCHANGE HUB</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="heading">
+            <img src="images\logo.png" alt="Logical conclusion graphic">
+        </div>
+        <nav>
+            <a class="topmenu" href="index.html">HOME</a>
+            <a class="topmenu" href="login.html">LOGIN</a>
+            <a class="topmenu" href="register.html">REGISTER</a>
+            <a class="topmenu" href="#">CONTACT US</a>
+            <a class="topmenu" href="rewards.html">REWARDS</a>
+        </nav>
+        <div style="position: absolute; right: 20px; top: 20px; background-color: rgb(164, 148, 61); padding: 10px; border-radius: 5px; font-size: 16px;">
+            <strong>Reward Points: </strong><span id="rewardPoints">0</span>
+        </div>
+    </header>
+
+    <section id="id">
+        <img class="gif_image" src="images\intro img.jpg" alt="Inspirational scene">
+    </section>
+
+    <section id="issues">
+        <div class="outer-box">
+            <h1>Challenges</h1>
+            <p>Explore the following problems and think about possible solutions:</p>
+
+            <div class="inner-box">
+                <!-- Problem Cards -->
+                <div class="problem">
+                    <h3>Lack of Quality Education</h3>
+                    <p>Many schools in rural areas lack basic infrastructure and qualified teachers.
+                        Many schools lack basic facilities like proper classrooms, sanitation, electricity, and clean drinking water.
+                        Insufficient learning materials such as textbooks, libraries, and computers.
+                    </p>
+                    <img src="images/p1.png" alt="Lack of Quality Education">
+                    <button onclick="openModal('Quality Education')">Provide Solution</button>
+                </div>
+
+                <div class="problem">
+                    <h3>Financial Constraints</h3>
+                    <p>Financial constraints can prevent students from continuing their education, leading to high dropout rates. 
+                     This can have long-term impacts on their future prospects and the economy as a whole.
+                     The effects can include difficulty in meeting basic needs, delaying business operations, or compromising project quality.
+                    </p>
+                    <img src="images\maxresdefault.jpg" alt="High Dropout Rates">
+                    <button onclick="openModal('High Dropout Rates')">Provide Solution</button>
+                </div>
+
+                <div class="problem">
+                    <h3>Pressure of Competitive Exams</h3>
+                    <p>The intense focus on competitive exams causes stress among students.</p>
+                    <img src="images\p3.jpg" alt="Competitive Exam Pressure">
+                    <button onclick="openModal('Competitive Exam Pressure')">Provide Solution</button>
+                </div>
+
+                <div class="problem">
+                    <h3>Digital Divide</h3>
+                    <p>Many students, especially in rural areas, lack access to digital devices and the internet for online learning.</p>
+                    <img src="images\p4.png" alt="Digital Divide">
+                    <button onclick="openModal('Digital Divide')">Provide Solution</button>
+                </div>
+
+                <div class="problem">
+                    <h3>Unemployment After Graduation</h3>
+                    <p>Many graduates struggle to find jobs due to skill gaps and lack of industry-relevant training.</p>
+                    <img src="images\p5.jpg" alt="Unemployment After Graduation">
+                    <button onclick="openModal('Unemployment After Graduation')">Provide Solution</button>
+                </div>
+
+                <div class="problem">
+                    <h3>Mental Health Issues</h3>
+                    <p>Stigma and lack of mental health support make it difficult for students to seek help.</p>
+                    <img src="images\p6.jpeg" alt="Mental Health Issues">
+                    <button onclick="openModal('Mental Health Issues')">Provide Solution</button>
+                </div>
+
+                <!--<div class="problem">
+                    <h3>Climate Change Awareness</h3>
+                    <p>Lack of awareness about climate change and its impacts among the general public.</p>
+                    <img src="https://via.placeholder.com/400x200" alt="Climate Change Awareness">
+                    <button onclick="openModal('Climate Change Awareness')">Provide Solution</button>
+                </div>
+
+                <div class="problem">
+                    <h3>Food Waste</h3>
+                    <p>Large quantities of food are wasted daily, even as many go hungry.</p>
+                    <img src="https://via.placeholder.com/400x200" alt="Food Waste">
+                    <button onclick="openModal('Food Waste')">Provide Solution</button>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <section id="share-new-problem">
+        <div class="outer-box">
+            <h1>Share a New Problem</h1>
+            
+            <!-- Problem description input -->
+            <textarea id="newProblemText" placeholder="Describe the problem you'd like to share..." 
+                      style="width: 100%; height: 100px; margin-bottom: 10px;"></textarea>
+            
+            <!-- File upload input -->
+            <label for="problemImage" style="display: block; margin-bottom: 10px; font-size: 16px; color: #333;">
+                Upload Related Issue Image:
+            </label>
+            <input type="file" id="problemImage" accept="image/*" 
+                   style="margin-bottom: 15px; font-size: 16px;">
+    
+            <!-- Submit button -->
+            <button onclick="submitNewProblem()" 
+                    style="padding: 10px 20px; background-color: blueviolet; color: white; border: none; 
+                           border-radius: 5px; cursor: pointer;">
+                Submit Problem
+            </button>
+        </div>
+    </section>
+    
+
+    <section id="solved-issues">
+        <div class="outer-box">
+            <h1>Recently Solved Issues</h1>
+            <div class="inner-box" id="solvedIssuesList">
+                <p><strong>1.</strong> Lack of Quality Education - Provided solution: "Build mobile education units to teach in rural areas."</p>
+                <p><strong>2.</strong> Digital Divide - Provided solution: "Distribute low-cost tablets with preloaded educational content."</p>
+                <p><strong>3.</strong> Food Waste - Provided solution: "Create apps to connect surplus food to food banks."</p>
+                <p><strong>4.</strong> Climate Change Awareness - Provided solution: "Organize community workshops and online campaigns."</p>
+                <p><strong>5.</strong> Mental Health Issues - Provided solution: "Launch a helpline for students to talk to mental health counselors."</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="solutionModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Provide Your Solution</h2>
+            <textarea id="solutionText" placeholder="Write your solution here..."></textarea>
+            <button onclick="submitSolution()">Submit</button>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <section id="team-members">
+        <div class="outer-box">
+            <h1>Meet Our Team</h1>
+            <div class="team-member">
+                <img src="images\unnamed.jpg" alt="Team Member 1">
+                <h3>MOHAMMAD FAZIL</h3>
+                
+                <p>Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="images\team 3.jpg" alt="Team Member 2">
+                <h3>CHAVALA NITHIN KUMAR </h3>
+                <p>Web Developer</p>
+            </div>
+    
+           <div class="team-member">
+                <!-- <img src="images/team-member3.jpg" alt="Team Member 3">-->
+                <h3>GUNTAGANI DEEPAK</h3>
+                <p>Web Developer</p>
+            </div>
+    
+            <div class="team-member">
+                <!--<img src="images/team-member4.jpg" alt="Team Member 4">-->
+                <h3>KARANAM LAHARISH</h3>
+                <p>Web Developer</p>
+            </div> 
+
+            <div class="team-member">
+                <!--<img src="images/team-member4.jpg" alt="Team Member 4">-->
+                <h3>NAGINENI VENKATA SREE KOUSTUBH</h3>
+                <p>Web Developer</p>
+            </div> 
+        </div>
+    </section>
+    <section>
+        <button class="scroll-to-top" id="scrollToTopBtn">↑</button>
+
+  <script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Show the button when scrolled down
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add("show");
+      } else {
+        scrollToTopBtn.classList.remove("show");
+      }
+    });
+
+    // Scroll to the top when button is clicked
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Idea Exchange Hub. All rights reserved.</p>
+        <nav>
+            <a href="privacypolicy.html">Privacy Policy</a> |
+            <a href="Terms of Service.html">Terms of Service</a> |
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </footer>
+
+    <script>
+        let rewardPoints = 0;
+
+        function openModal(problemTitle) {
+            document.getElementById('solutionModal').style.display = 'flex';
+            document.getElementById('modalTitle').innerText = `Provide Your Solution for: ${problemTitle}`;
+        }
+
+        function closeModal() {
+            document.getElementById('solutionModal').style.display = 'none';
+        }
+
+        function submitSolution() {
+            const solution = document.getElementById('solutionText').value;
+            if (solution.trim() === '') {
+                alert('Please write a solution before submitting.');
+            } else {
+                alert('Thank you for your solution! You have earned 10 reward points!');
+                rewardPoints += 10;
+                document.getElementById('rewardPoints').innerText = rewardPoints;
+                closeModal();
+            }
+        }
+
+        function submitNewProblem() {
+            const newProblem = document.getElementById('newProblemText').value;
+            if (newProblem.trim() === '') {
+                alert('Please describe the problem before submitting.');
+            } else {
+                alert('Thank you for sharing the problem! We will review it.');
+                document.getElementById('newProblemText').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
